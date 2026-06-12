@@ -1,0 +1,30 @@
+# Keil uVision generated files
+Proj/Objects/
+Proj/Listings/
+Proj/*.axf
+Proj/*.bin
+Proj/*.hex
+Proj/*.map
+Proj/*.lnp
+Proj/*.htm
+Proj/*.crf
+Proj/*.d
+Proj/*.o
+Proj/*.elf
+Proj/*.sct
+Proj/*.dep
+Proj/*.uvgui*
+Proj/*.uvoptx
+
+# Proteus/backup artifacts
+Project Backups/
+*.autosave
+*.bak
+*~
+
+# Windows junk
+Thumbs.db
+Desktop.ini
+
+# If you do not want to version local editor settings, uncomment these
+# .vscode/
