@@ -56,35 +56,7 @@ int main() {
 	Config_GPIO_Digit();
 	Config_GPIO_Segment();
 	while (1) {
-		int i, j;
-		for (i = 0; i < 10; i++) {
-			GPIO_ResetBits(GPIOA, GPIO_Pin_0); // tat led hang chuc
-			GPIO_SetBits(GPIOA, GPIO_Pin_1); // bat led hang don vi
-			GPIOA->ODR &= ~(0x7F << 3);
-			GPIOA->ODR |= (Led7Seg[i] << 3);
-			Delay_Ms(240);
-		}
-		Delay_Ms(240);
-		
-		for (i = 10; i < 100; i++) {
-			for (j = 0; j < 60; j++) {
-				// hang chuc
-				// clear bit ODR truoc
-				GPIOA->ODR &= ~(0x7F << 3);
-				GPIOA->ODR |= (Led7Seg[i / 10] << 3);
-				GPIO_SetBits(GPIOA, GPIO_Pin_0); // bat led dieu khien hang chuc
-				Delay_Ms(2);
-				GPIO_ResetBits(GPIOA, GPIO_Pin_0); // tat led dieu khien hang chuc
-								
-				// hang don vi
-				// clear bit ODR truoc
-				GPIOA->ODR &= ~(0x7F << 3);
-				GPIOA->ODR |= (Led7Seg[i % 10] << 3);
-				GPIO_SetBits(GPIOA, GPIO_Pin_1); // bat led dieu khien hang don vi
-				Delay_Ms(2);
-				GPIO_ResetBits(GPIOA, GPIO_Pin_1); // tat led dieu khien hang don vi
-			}
-		}
+		Effect_2Digit_Ver4();
 	}
 }
 
@@ -271,5 +243,33 @@ void Effect_2Digit_Ver3(void) {
 }
 
 void Effect_2Digit_Ver4(void) {
-
+	int i, j;
+	for (i = 0; i < 10; i++) {
+		GPIO_ResetBits(GPIOA, GPIO_Pin_0); // tat led hang chuc
+		GPIO_SetBits(GPIOA, GPIO_Pin_1); // bat led hang don vi
+		GPIOA->ODR &= ~(0x7F << 3);
+		GPIOA->ODR |= (Led7Seg[i] << 3);
+		Delay_Ms(240);
+	}
+	Delay_Ms(240);
+	
+	for (i = 10; i < 100; i++) {
+		for (j = 0; j < 60; j++) {
+			// hang chuc
+			// clear bit ODR truoc
+			GPIOA->ODR &= ~(0x7F << 3);
+			GPIOA->ODR |= (Led7Seg[i / 10] << 3);
+			GPIO_SetBits(GPIOA, GPIO_Pin_0); // bat led dieu khien hang chuc
+			Delay_Ms(2);
+			GPIO_ResetBits(GPIOA, GPIO_Pin_0); // tat led dieu khien hang chuc
+							
+			// hang don vi
+			// clear bit ODR truoc
+			GPIOA->ODR &= ~(0x7F << 3);
+			GPIOA->ODR |= (Led7Seg[i % 10] << 3);
+			GPIO_SetBits(GPIOA, GPIO_Pin_1); // bat led dieu khien hang don vi
+			Delay_Ms(2);
+			GPIO_ResetBits(GPIOA, GPIO_Pin_1); // tat led dieu khien hang don vi
+		}
+	}
 }

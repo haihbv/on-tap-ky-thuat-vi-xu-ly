@@ -20,6 +20,7 @@ void Config_GPIO_Segment(void);
 *				- nhan 1 lan: hien thi cac so nguyen to
 *				- nhan 2 lan: hien thi cac so chinh phuong
 *				- nhan 3 lan: hien thi so chan hoac le
+* Ver4: nếu có một chữ số từ 0 đến 9 thì hàng chục phải off
 */
 
 int So_Nguyen_To(int n) {
@@ -46,15 +47,16 @@ int So_Chan(int n) {
 void Effect_2Digit_Ver1(void);
 void Effect_2Digit_Ver2(void);
 void Effect_2Digit_Ver3(void); 
+void Effect_2Digit_Ver4(void);
 
 int cnt = 0;
 
 int main() {
-	Config_GPIO_Input();
+	// Config_GPIO_Input();
 	Config_GPIO_Digit();
 	Config_GPIO_Segment();
 	while (1) {
-		Effect_2Digit_Ver3();
+		Effect_2Digit_Ver4();
 	}
 }
 
@@ -238,4 +240,36 @@ void Effect_2Digit_Ver3(void) {
 			}
 		}
 
+}
+
+void Effect_2Digit_Ver4(void) {
+	int i, j;
+	for (i = 0; i < 10; i++) {
+		GPIO_ResetBits(GPIOA, GPIO_Pin_0); // tat led hang chuc
+		GPIO_SetBits(GPIOA, GPIO_Pin_1); // bat led hang don vi
+		GPIOA->ODR &= ~(0x7F << 3);
+		GPIOA->ODR |= (Led7Seg[i] << 3);
+		Delay_Ms(240);
+	}
+	Delay_Ms(240);
+	
+	for (i = 10; i < 100; i++) {
+		for (j = 0; j < 60; j++) {
+			// hang chuc
+			// clear bit ODR truoc
+			GPIOA->ODR &= ~(0x7F << 3);
+			GPIOA->ODR |= (Led7Seg[i / 10] << 3);
+			GPIO_SetBits(GPIOA, GPIO_Pin_0); // bat led dieu khien hang chuc
+			Delay_Ms(2);
+			GPIO_ResetBits(GPIOA, GPIO_Pin_0); // tat led dieu khien hang chuc
+							
+			// hang don vi
+			// clear bit ODR truoc
+			GPIOA->ODR &= ~(0x7F << 3);
+			GPIOA->ODR |= (Led7Seg[i % 10] << 3);
+			GPIO_SetBits(GPIOA, GPIO_Pin_1); // bat led dieu khien hang don vi
+			Delay_Ms(2);
+			GPIO_ResetBits(GPIOA, GPIO_Pin_1); // tat led dieu khien hang don vi
+		}
+	}
 }
