@@ -146,24 +146,23 @@ void Effect_2Digit_Ver3(void) {
 		}
 
 		if (cnt == 3) {
-			for (i = 0; i < 100; i++) {
-				if (So_Chan(i)) {
-					for (j = 0; j < 105; j++) {
-						GPIO_SetBits(GPIOA, GPIO_Pin_0);
-						GPIOA->ODR &= ~(0x7F << 3);
-						GPIOA->ODR |= (Led7Seg[i / 10] << 3);
-						Delay_Ms(1);
-						GPIO_ResetBits(GPIOA, GPIO_Pin_0);
-						
-						GPIO_SetBits(GPIOA, GPIO_Pin_1);
-						GPIOA->ODR &= ~(0x7F << 3);
-						GPIOA->ODR |= (Led7Seg[i % 10] << 3);
-						Delay_Ms(1);
-						GPIO_ResetBits(GPIOA, GPIO_Pin_1);
-					}
+		for (i = 0; i < 100; i++) {
+			if (So_Chan(i)) {
+				for (j = 0; j < 105; j++) {
+					GPIO_SetBits(GPIOA, GPIO_Pin_0);
+					GPIOA->ODR &= ~(0x7F << 3);
+					GPIOA->ODR |= (Led7Seg[i / 10] << 3);
+					Delay_Ms(1);
+					GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+					
+					GPIO_SetBits(GPIOA, GPIO_Pin_1);
+					GPIOA->ODR &= ~(0x7F << 3);
+					GPIOA->ODR |= (Led7Seg[i % 10] << 3);
+					Delay_Ms(1);
+					GPIO_ResetBits(GPIOA, GPIO_Pin_1);
 				}
-				
 			}
+			
 		}
-
+		}
 }
