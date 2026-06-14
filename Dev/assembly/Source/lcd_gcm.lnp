@@ -1,0 +1,1 @@
+-T ..\asm_link.ld -Wl,-Ttext=0x00,-Tdata=0x40000000 -o lcd_gcm.elf "main.o" "gcd_lcm.o" -nostartfiles -nodefaultlibs -lc -lgcc

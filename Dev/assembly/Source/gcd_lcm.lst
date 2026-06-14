@@ -1,0 +1,30 @@
+ARM GAS  gcd_lcm.s 			page 1
+
+
+   1              	.text
+   2              	.arm
+   3              	.global MAX_NUMBER2
+   4              	
+   5              	MAX_NUMBER2:
+   6 0000 010050E1 		CMP R0, R1
+   7 0004 0100A0B1 		MOVLT R0, R1
+   8 0008 020050E1 		CMP R0, R2
+   9 000c 0200A0B1 		MOVLT R0, R2
+  10 0010 030050E1 		CMP R0, R3
+  11 0014 0300A0B1 		MOVLT R0, R3
+  12              		
+  13 0018 020051E1 		CMP R1, R2
+  14 001c 0210A0B1 		MOVLT R1, R2
+  15 0020 030051E1 		CMP R1, R3
+  16 0024 0310A0B1 		MOVLT R1, R3
+  17              	
+  18 0028 0100A0E1 		MOV R0, R1
+  19              	
+  20              	.end
+ARM GAS  gcd_lcm.s 			page 2
+
+
+DEFINED SYMBOLS
+           gcd_lcm.s:5      .text:00000000 MAX_NUMBER2
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,4 @@
+Dependencies for Project 'gcd_lcm', Target 'B23DCDT082': (DO NOT MODIFY !)
+F (.\main.c)(0x6A2F09B7)(-c -mcpu=arm7tdmi -gdwarf-2 -MD -w -O -mapcs-frame -IC:\Keil\ARM\INC\Philips\ -Wa,-alhms="main.lst" -o main.o)
+F (.\gcd_lcm.s)(0x6A2F0A20)(-m arm7tdmi --MD gcd_lcm.d -IC:\Keil\ARM\INC\Philips\ -alhms="gcd_lcm.lst" -o gcd_lcm.o)
+F (..\asm_link.ld)(0x6A2E0B55)()

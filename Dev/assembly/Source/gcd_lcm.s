@@ -1,0 +1,20 @@
+.text
+.arm
+.global MAX_NUMBER2
+
+MAX_NUMBER2:
+	CMP R0, R1
+	MOVLT R0, R1
+	CMP R0, R2
+	MOVLT R0, R2
+	CMP R0, R3
+	MOVLT R0, R3
+	
+	CMP R1, R2
+	MOVLT R1, R2
+	CMP R1, R3
+	MOVLT R1, R3
+
+	MOV R0, R1
+
+.end

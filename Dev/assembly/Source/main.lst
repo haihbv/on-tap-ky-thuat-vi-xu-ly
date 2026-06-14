@@ -1,0 +1,278 @@
+ARM GAS  /cygdrive/c/Users/ADMIN/AppData/Local/Temp/ccpBchSN.s 			page 1
+
+
+   1              		.file	"main.c"
+   2              		.file 1 "main.c"
+   3              		.section	.debug_abbrev,"",%progbits
+   4              	.Ldebug_abbrev0:
+   5              		.section	.debug_info,"",%progbits
+   6              	.Ldebug_info0:
+   7              		.section	.debug_line,"",%progbits
+   8              	.Ldebug_line0:
+   9 0000 2F000000 		.text
+   9      02001A00 
+   9      00000201 
+   9      FB0E0A00 
+   9      01010101 
+  10              	.Ltext0:
+  11              		.align	2
+  12              		.global	main
+  13              		.type	main, %function
+  14              	main:
+  15              	.LFB3:
+   1:main.c        **** int MAX_NUMBER2(int a, int b, int c, int d);
+   2:main.c        **** 
+   3:main.c        **** int main() {
+  16              		.loc 1 3 0
+  17              		@ args = 0, pretend = 0, frame = 0
+  18              		@ frame_needed = 1, uses_anonymous_args = 0
+  19 0000 0DC0A0E1 		mov	ip, sp
+  20              	.LCFI0:
+  21 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+  22              	.LCFI1:
+  23 0008 04B04CE2 		sub	fp, ip, #4
+  24              	.LCFI2:
+   4:main.c        **** 	int a, b, c, d, kq;
+   5:main.c        **** 	a = 10, b =7, c= 2, d = 8;
+   6:main.c        **** 	kq = MAX_NUMBER2(a, b, c, d);
+  25              		.loc 1 6 0
+  26              	.LBB2:
+  27 000c 0A00A0E3 		mov	r0, #10
+  28 0010 0710A0E3 		mov	r1, #7
+  29 0014 0220A0E3 		mov	r2, #2
+  30 0018 0830A0E3 		mov	r3, #8
+  31 001c FEFFFFEB 		bl	MAX_NUMBER2
+   7:main.c        **** }
+  32              		.loc 1 7 0
+  33 0020 00A81BE9 		ldmea	fp, {fp, sp, pc}
+  34              	.LBE2:
+  35              	.LFE3:
+  36              		.size	main, .-main
+  37              		.section	.debug_frame,"",%progbits
+  38              	.Lframe0:
+  39 0000 0C000000 		.4byte	.LECIE0-.LSCIE0
+  40              	.LSCIE0:
+  41 0004 FFFFFFFF 		.4byte	0xffffffff
+  42 0008 01       		.byte	0x1
+  43 0009 00       		.ascii	"\000"
+  44 000a 01       		.uleb128 0x1
+  45 000b 7C       		.sleb128 -4
+  46 000c 0E       		.byte	0xe
+ARM GAS  /cygdrive/c/Users/ADMIN/AppData/Local/Temp/ccpBchSN.s 			page 2
+
+
+  47 000d 0C       		.byte	0xc
+  48 000e 0D       		.uleb128 0xd
+  49 000f 00       		.uleb128 0x0
+  50              		.align	2
+  51              	.LECIE0:
+  52              	.LSFDE0:
+  53 0010 1C000000 		.4byte	.LEFDE0-.LASFDE0
+  54              	.LASFDE0:
+  55 0014 00000000 		.4byte	.Lframe0
+  56 0018 00000000 		.4byte	.LFB3
+  57 001c 24000000 		.4byte	.LFE3-.LFB3
+  58 0020 44       		.byte	0x4
+  59              		.4byte	.LCFI0-.LFB3
+  60 0021 0D       		.byte	0xd
+  61 0022 0C       		.uleb128 0xc
+  62 0023 44       		.byte	0x4
+  63              		.4byte	.LCFI1-.LCFI0
+  64 0024 8E       		.byte	0x8e
+  65 0025 02       		.uleb128 0x2
+  66 0026 8D       		.byte	0x8d
+  67 0027 03       		.uleb128 0x3
+  68 0028 8B       		.byte	0x8b
+  69 0029 04       		.uleb128 0x4
+  70 002a 44       		.byte	0x4
+  71              		.4byte	.LCFI2-.LCFI1
+  72 002b 0C       		.byte	0xc
+  73 002c 0B       		.uleb128 0xb
+  74 002d 04       		.uleb128 0x4
+  75 002e 0000     		.align	2
+  76              	.LEFDE0:
+  77              		.text
+  78              	.Letext0:
+  79              		.section	.debug_info
+  80 0000 72000000 		.4byte	0x72
+  81 0004 0200     		.2byte	0x2
+  82 0006 00000000 		.4byte	.Ldebug_abbrev0
+  83 000a 04       		.byte	0x4
+  84 000b 01       		.uleb128 0x1
+  85 000c 00000000 		.4byte	.Ldebug_line0
+  86 0010 24000000 		.4byte	.Letext0
+  87 0014 00000000 		.4byte	.Ltext0
+  88 0018 0C000000 		.4byte	.LC0
+  89 001c 13000000 		.4byte	.LC1
+  90 0020 00000000 		.4byte	.LC2
+  91 0024 01       		.byte	0x1
+  92 0025 02       		.uleb128 0x2
+  93 0026 6E000000 		.4byte	0x6e
+  94 002a 01       		.byte	0x1
+  95 002b 4F000000 		.4byte	.LC3
+  96 002f 01       		.byte	0x1
+  97 0030 03       		.byte	0x3
+  98 0031 6E000000 		.4byte	0x6e
+  99 0035 00000000 		.4byte	.LFB3
+ 100 0039 24000000 		.4byte	.LFE3
+ 101 003d 01       		.byte	0x1
+ 102 003e 5B       		.byte	0x5b
+ 103 003f 03       		.uleb128 0x3
+ARM GAS  /cygdrive/c/Users/ADMIN/AppData/Local/Temp/ccpBchSN.s 			page 3
+
+
+ 104 0040 6100     		.ascii	"a\000"
+ 105 0042 01       		.byte	0x1
+ 106 0043 04       		.byte	0x4
+ 107 0044 6E000000 		.4byte	0x6e
+ 108 0048 03       		.uleb128 0x3
+ 109 0049 6200     		.ascii	"b\000"
+ 110 004b 01       		.byte	0x1
+ 111 004c 04       		.byte	0x4
+ 112 004d 6E000000 		.4byte	0x6e
+ 113 0051 03       		.uleb128 0x3
+ 114 0052 6300     		.ascii	"c\000"
+ 115 0054 01       		.byte	0x1
+ 116 0055 04       		.byte	0x4
+ 117 0056 6E000000 		.4byte	0x6e
+ 118 005a 03       		.uleb128 0x3
+ 119 005b 6400     		.ascii	"d\000"
+ 120 005d 01       		.byte	0x1
+ 121 005e 04       		.byte	0x4
+ 122 005f 6E000000 		.4byte	0x6e
+ 123 0063 03       		.uleb128 0x3
+ 124 0064 6B7100   		.ascii	"kq\000"
+ 125 0067 01       		.byte	0x1
+ 126 0068 04       		.byte	0x4
+ 127 0069 6E000000 		.4byte	0x6e
+ 128 006d 00       		.byte	0x0
+ 129 006e 04       		.uleb128 0x4
+ 130 006f 696E7400 		.ascii	"int\000"
+ 131 0073 04       		.byte	0x4
+ 132 0074 05       		.byte	0x5
+ 133 0075 00       		.byte	0x0
+ 134              		.section	.debug_abbrev
+ 135 0000 01       		.uleb128 0x1
+ 136 0001 11       		.uleb128 0x11
+ 137 0002 01       		.byte	0x1
+ 138 0003 10       		.uleb128 0x10
+ 139 0004 06       		.uleb128 0x6
+ 140 0005 12       		.uleb128 0x12
+ 141 0006 01       		.uleb128 0x1
+ 142 0007 11       		.uleb128 0x11
+ 143 0008 01       		.uleb128 0x1
+ 144 0009 03       		.uleb128 0x3
+ 145 000a 0E       		.uleb128 0xe
+ 146 000b 1B       		.uleb128 0x1b
+ 147 000c 0E       		.uleb128 0xe
+ 148 000d 25       		.uleb128 0x25
+ 149 000e 0E       		.uleb128 0xe
+ 150 000f 13       		.uleb128 0x13
+ 151 0010 0B       		.uleb128 0xb
+ 152 0011 00       		.byte	0x0
+ 153 0012 00       		.byte	0x0
+ 154 0013 02       		.uleb128 0x2
+ 155 0014 2E       		.uleb128 0x2e
+ 156 0015 01       		.byte	0x1
+ 157 0016 01       		.uleb128 0x1
+ 158 0017 13       		.uleb128 0x13
+ 159 0018 3F       		.uleb128 0x3f
+ 160 0019 0C       		.uleb128 0xc
+ARM GAS  /cygdrive/c/Users/ADMIN/AppData/Local/Temp/ccpBchSN.s 			page 4
+
+
+ 161 001a 03       		.uleb128 0x3
+ 162 001b 0E       		.uleb128 0xe
+ 163 001c 3A       		.uleb128 0x3a
+ 164 001d 0B       		.uleb128 0xb
+ 165 001e 3B       		.uleb128 0x3b
+ 166 001f 0B       		.uleb128 0xb
+ 167 0020 49       		.uleb128 0x49
+ 168 0021 13       		.uleb128 0x13
+ 169 0022 11       		.uleb128 0x11
+ 170 0023 01       		.uleb128 0x1
+ 171 0024 12       		.uleb128 0x12
+ 172 0025 01       		.uleb128 0x1
+ 173 0026 40       		.uleb128 0x40
+ 174 0027 0A       		.uleb128 0xa
+ 175 0028 00       		.byte	0x0
+ 176 0029 00       		.byte	0x0
+ 177 002a 03       		.uleb128 0x3
+ 178 002b 34       		.uleb128 0x34
+ 179 002c 00       		.byte	0x0
+ 180 002d 03       		.uleb128 0x3
+ 181 002e 08       		.uleb128 0x8
+ 182 002f 3A       		.uleb128 0x3a
+ 183 0030 0B       		.uleb128 0xb
+ 184 0031 3B       		.uleb128 0x3b
+ 185 0032 0B       		.uleb128 0xb
+ 186 0033 49       		.uleb128 0x49
+ 187 0034 13       		.uleb128 0x13
+ 188 0035 00       		.byte	0x0
+ 189 0036 00       		.byte	0x0
+ 190 0037 04       		.uleb128 0x4
+ 191 0038 24       		.uleb128 0x24
+ 192 0039 00       		.byte	0x0
+ 193 003a 03       		.uleb128 0x3
+ 194 003b 08       		.uleb128 0x8
+ 195 003c 0B       		.uleb128 0xb
+ 196 003d 0B       		.uleb128 0xb
+ 197 003e 3E       		.uleb128 0x3e
+ 198 003f 0B       		.uleb128 0xb
+ 199 0040 00       		.byte	0x0
+ 200 0041 00       		.byte	0x0
+ 201 0042 00       		.byte	0x0
+ 202              		.section	.debug_pubnames,"",%progbits
+ 203 0000 17000000 		.4byte	0x17
+ 204 0004 0200     		.2byte	0x2
+ 205 0006 00000000 		.4byte	.Ldebug_info0
+ 206 000a 76000000 		.4byte	0x76
+ 207 000e 25000000 		.4byte	0x25
+ 208 0012 6D61696E 		.ascii	"main\000"
+ 208      00
+ 209 0017 00000000 		.4byte	0x0
+ 210              		.section	.debug_aranges,"",%progbits
+ 211 0000 1C000000 		.4byte	0x1c
+ 212 0004 0200     		.2byte	0x2
+ 213 0006 00000000 		.4byte	.Ldebug_info0
+ 214 000a 04       		.byte	0x4
+ 215 000b 00       		.byte	0x0
+ 216 000c 0000     		.2byte	0x0
+ARM GAS  /cygdrive/c/Users/ADMIN/AppData/Local/Temp/ccpBchSN.s 			page 5
+
+
+ 217 000e 0000     		.2byte	0x0
+ 218 0010 00000000 		.4byte	.Ltext0
+ 219 0014 24000000 		.4byte	.Letext0-.Ltext0
+ 220 0018 00000000 		.4byte	0x0
+ 221 001c 00000000 		.4byte	0x0
+ 222              		.section	.debug_str,"MS",%progbits,1
+ 223              	.LC2:
+ 224 0000 474E5520 		.ascii	"GNU C 3.3.1\000"
+ 224      4320332E 
+ 224      332E3100 
+ 225              	.LC0:
+ 226 000c 6D61696E 		.ascii	"main.c\000"
+ 226      2E6300
+ 227              	.LC1:
+ 228 0013 2F637967 		.ascii	"/cygdrive/c/Users/ADMIN/Desktop/kt_vxl/code/assembl"
+ 228      64726976 
+ 228      652F632F 
+ 228      55736572 
+ 228      732F4144 
+ 229 0046 792F536F 		.ascii	"y/Source\000"
+ 229      75726365 
+ 229      00
+ 230              	.LC3:
+ 231 004f 6D61696E 		.ascii	"main\000"
+ 231      00
+ 232              		.ident	"GCC: (GNU) 3.3.1"
+ARM GAS  /cygdrive/c/Users/ADMIN/AppData/Local/Temp/ccpBchSN.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+/cygdrive/c/Users/ADMIN/AppData/Local/Temp/ccpBchSN.s:14     .text:00000000 main
+
+UNDEFINED SYMBOLS
+MAX_NUMBER2
